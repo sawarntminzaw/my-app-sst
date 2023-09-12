@@ -1,0 +1,359 @@
+{
+  "version": "33.0.0",
+  "artifacts": {
+    "arntminzaw-my-app-sst-Site.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "arntminzaw-my-app-sst-Site.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "arntminzaw-my-app-sst-Site": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://275941591391/us-east-1",
+      "properties": {
+        "templateFile": "arntminzaw-my-app-sst-Site.template.json",
+        "tags": {
+          "sst:app": "my-app-sst",
+          "sst:stage": "arntminzaw"
+        },
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::275941591391:role/cdk-hnb659fds-deploy-role-275941591391-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::275941591391:role/cdk-hnb659fds-cfn-exec-role-275941591391-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-275941591391-us-east-1/351043791758ec07b1f1a055cd7363b3e1bf3dd4854fc0dc0196b31f828edf75.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "arntminzaw-my-app-sst-Site.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::275941591391:role/cdk-hnb659fds-lookup-role-275941591391-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "arntminzaw-my-app-sst-Site.assets"
+      ],
+      "metadata": {
+        "/arntminzaw-my-app-sst-Site": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "sst:app",
+                "Value": "my-app-sst"
+              },
+              {
+                "Key": "sst:stage",
+                "Value": "arntminzaw"
+              }
+            ]
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/CustomResourceHandler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomResourceHandlerServiceRole41AEC181"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/CustomResourceHandler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomResourceHandlerE8FB56BA"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/site/S3Bucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteS3Bucket2B2851F3"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/site/S3Bucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteS3BucketPolicyBB4DF05F"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/site/S3Bucket/AutoDeleteObjectsCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteS3BucketAutoDeleteObjectsCustomResource3E10A2DE"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/site/ServerFunction/AssetReplacerPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteServerFunctionAssetReplacerPolicy304BF125"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/site/ServerFunction/AssetReplacer/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteServerFunctionAssetReplacer9A11D516"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/site/ServerFunction/ServerFunction/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteServerFunctionServiceRole8328A688"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/site/ServerFunction/ServerFunction/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteServerFunctionServiceRoleDefaultPolicy6EA49472"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/site/ServerFunction/ServerFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteServerFunction6DFA6F1B"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/site/ServerFunction/ServerFunction/LogRetention/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteServerFunctionLogRetention7123678D"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/site/ServerFunction/ServerFunction/FunctionUrl/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteServerFunctionFunctionUrl1B09C490"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/site/ServerFunction/ServerFunction/invoke-function-url": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteServerFunctioninvokefunctionurlEABB57E1"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/site/ServerCache/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteServerCacheDD54ACDF"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/site/CloudFrontFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteCloudFrontFunctionE91DD486"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/site/ImageFunction/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteImageFunctionServiceRoleAD5B95E2"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/site/ImageFunction/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteImageFunctionServiceRoleDefaultPolicy39F33332"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/site/ImageFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteImageFunctionD6B403E9"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/site/ImageFunction/LogRetention/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteImageFunctionLogRetentionD1B5BECE"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/site/ImageFunction/FunctionUrl/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteImageFunctionFunctionUrl110B87E7"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/site/ImageFunction/invoke-function-url": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteImageFunctioninvokefunctionurl443403A1"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/site/Distribution/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteDistribution706F5265"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/site/Distribution/Origin3/S3Origin/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteDistributionOrigin3S3Origin7C72BBD7"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/site/ServerFunctionInvalidatorPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteServerFunctionInvalidatorPolicy004B2ED1"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/site/AwsCliLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteAwsCliLayer359A0EF0"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/site/S3Uploader/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteS3UploaderServiceRole973F5A0B"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/site/S3Uploader/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteS3UploaderServiceRoleDefaultPolicy8BA893D3"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/site/S3Uploader/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteS3Uploader2837C218"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/site/S3Handler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteS3HandlerServiceRole6D2CC8E3"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/site/S3Handler/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteS3HandlerServiceRoleDefaultPolicy1BD27252"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/site/S3Handler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteS3Handler84D19388"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/site/S3Deployment/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteS3DeploymentB932FFDB"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/site/CloudFrontInvalidatorPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteCloudFrontInvalidatorPolicyEE18C654"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/site/CloudFrontInvalidator/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteCloudFrontInvalidator18BEA866"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/site/RevalidationQueue/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteRevalidationQueue355EB7DA"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/site/RevalidationFunction/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteRevalidationFunctionServiceRole02D71DA1"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/site/RevalidationFunction/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteRevalidationFunctionServiceRoleDefaultPolicy57C55CA4"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/site/RevalidationFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteRevalidationFunctionEB84F6D0"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/site/RevalidationFunction/SqsEventSource:arntminzawmyappsstSitesiteRevalidationQueue23CB09B8/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteRevalidationFunctionSqsEventSourcearntminzawmyappsstSitesiteRevalidationQueue23CB09B8F7981614"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/site/Parameter_url/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteParameterurl3D1716BC"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRoleDefaultPolicyADDA7DEB"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aFD4BFC8A"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/SSTStackOutputSiteUrl": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SiteUrl"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/SSTStackOutputSSTMetadata": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SSTMetadata"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/arntminzaw-my-app-sst-Site/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "arntminzaw-my-app-sst-Site"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
